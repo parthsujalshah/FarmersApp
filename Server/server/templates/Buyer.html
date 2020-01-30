@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--icon cdn-->
+	<script src="https://kit.fontawesome.com/e7e5439d34.js" crossorigin="anonymous"></script>
+	<!--meta required-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Bootstrap-->
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<!--linking the CSS -->
+	<!-- <link rel="stylesheet" type="text/css" href="FarmersFriendSchemes.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/FarmersFriendSchemes.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="body" style="background-color: aquamarine;min-height: 900px;;">
+    <div class="navbar-container" style="margin: 0px; padding:0px;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="myNavbar" style="height: 66px;
+        width: 100%;">
+            <div class="d-flex flex-grow-1">
+                <span class="w-100 d-lg-none d-block">
+                    <!-- hidden spacer to center brand on mobile --></span>
+                <a style="color: white;" class="navbar-brand" href="#">
+                    Farmer's Friend
+                </a>
+                <div class="w-100 text-right">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                <ul class="navbar-nav ml-auto flex-nowrap">
+                    <li class="nav-item">
+                        <a href="{{url_for('home')}}" class="nav-link "><strong>Home</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('schemes_test')}}" class="nav-link"><strong>Scheme</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('add_scheme')}}" class="nav-link"><strong>Add Schemes</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('alerts')}}" class="nav-link"><strong>Alert</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#team" class="nav-link"><strong>Grievances</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url_for('log_out')}}" class="nav-link">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container" style="margin-top: 100px;background-color: #D1F7F2;width: 100;">
+    <form method="POST" action="" style="margin-left: 350px;">
+        {{form.hidden_tag()}}
+        <div>
+            {{form.username.label(style="font-size:40px;")}}
+            <br>
+            {{form.username(style="padding:10px;width:300px;")}}
+        </div>
+        <br>
+        <div>
+            {{form.email.label(style="font-size:40px;")}}
+            <br>
+            {{form.email(style="padding:10px;width:300px;")}}
+        </div>
+        <br>
+        <div>
+            {{form.password.label(style="font-size:40px;")}}
+            <br>
+            {{form.password(style="padding:10px;width:300px;")}}
+        </div>
+        <br>
+        <div>
+            {{form.confirm_password.label(style="font-size:40px;")}}
+            <br>
+            {{form.confirm_password(style="padding:10px;width:300px;")}}
+        </div>
+        <br>
+        <div>
+            {{form.submit(style="padding:15px;width:100px;font-size:20px;")}}
+        </div>
+    </form>
+    </div>
+    </body>
+</body>
+
+</html>

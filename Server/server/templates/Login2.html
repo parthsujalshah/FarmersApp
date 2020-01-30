@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--icon cdn-->
+    <script src="https://kit.fontawesome.com/e7e5439d34.js" crossorigin="anonymous"></script>
+    <!--meta required-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!--linking the CSS -->
+    <link rel="stylesheet" type="text/css" href="farmerfriendSignIn.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/Login.css')}}">
+    <title>Farmers Friend SignIn</title>
+</head>
+
+<body>
+    <div class="body" style="display: flex; flex-direction: row;">
+        <div class="col-lg-6" <div style="
+            background-image: url('D:/Downloads/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin:0px;
+            padding-right: 0px;
+        ">
+            <div>
+                <div style="
+                    height: 790px;
+                ">
+                    <div style="
+                        margin-left: 250px;margin-top: 80px;align-items: center;
+                    ">
+                        <h1 style="margin-left:40px ;font-size: 100x;" >Sign In</h1>
+                        <br>
+                        <button style="margin-left: 40px;" class="but1"><a href="www.facebook.com"><i class="fab fa-facebook"></i></a></button>
+                        <button class="but1"><a href="www.gmail.com"><i class="fab fa-google"></i></a></button>
+                        <button class="but1"><a href="www.linkedin"></a><i class="fab fa-linkedin"></i></button>
+                        <br>
+                        <br>
+                        <br>
+                        <form method="POST" action="">
+                            {{ form.hidden_tag() }}
+                            <fieldset>
+                                <label for="username"><b>
+                                        <h2>{{ form.name.label(class="username") }}</h2>
+                                    </b></label>
+                                <div style="margin-bottom: 40px;">
+                                    {{ form.name(style="width: 350px; height: 40px;background-color:#F7F9EB") }}
+                                </div>
+                                <label for="password"><b>
+                                        <h2>{{ form.password.label( class="password")}}</h2>
+                                    </b></label>
+                                <div>
+                                    {{ form.password(style="width: 350px; height: 40px; margin-bottom:20px;background-color:#F7F9EB") }}
+                                </div>
+                                <label for="remember"><b> {{ form.remember.label( style="
+                                    margin-bottom:0px;
+                                    font-size:20px;
+                                    ")}}</b></label>
+                                <div>
+                                    {{ form.remember}}
+                                </div>
+                            </fieldset>
+                            <div>
+                                {{ form.submit.label( style="
+                                    font-size:25px;
+                                    margin-bottom:10px;
+                                ")}}
+                                <br>
+                                {{ form.submit() }}
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <img class="fit"
+                src="https://images.unsplash.com/photo-1547149600-a6cdf8fce60c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+                alt="Register Now" style="width: 100%">
+            <h1 class="imagetext">Hello, Friend!</h1>
+            <br>
+            <p class="imagetext1">Enter your Personal details</p>
+            <p class="imagetext2">and Start the journey with us</p>
+            <a href="{{url_for('register')}}"><button class="but3">Register Now</button></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

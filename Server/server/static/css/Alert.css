@@ -1,0 +1,36 @@
+.high{
+	background-color: red;
+}
+.moderate{
+	background-color: yellow;
+}
+.low{
+	background-color: green;
+}
+#Subject{
+	width: 500px;
+	background-color: #edede0;
+}
+#Details{
+    width: 900px;
+    height: 250px;
+    background-color: #f9f9da;
+}
+#Specifics{
+    width: 900px;
+    height: 100px;
+    background-color: #f5e29e;
+}
+.label{
+	font-size: 30px;
+}
+#myNavbar{
+    height: 50px;
+    width: 100%;
+}
+/*change the link color on hover*/
+li a:hover{
+   background-color: #FFC733;
+   color: white;
+}
+

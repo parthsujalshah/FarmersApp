@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--icon cdn-->
+    <script src="https://kit.fontawesome.com/e7e5439d34.js" crossorigin="anonymous"></script>
+    <!--meta required-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!--linking the CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/Home.css')}}">
+    <!-- <link rel="stylesheet" type="text/css" href="Home.css"> -->
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="body">
+        <div class="navbar-container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="myNavbar">
+                <div class="d-flex flex-grow-1">
+                    <span class="w-100 d-lg-none d-block">
+                        <!-- hidden spacer to center brand on mobile --></span>
+                    <a class="navbar-brand" href="#">
+                        Navbar 7
+                    </a>
+                    <div class="w-100 text-right">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                    <ul class="navbar-nav ml-auto flex-nowrap">
+                        {% if current_user.is_authenticated %}
+                        <li class="nav-item">
+                            <a href="{{url_for('home')}}" class="nav-link "><strong>Home</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url_for('schemes_test')}}" class="nav-link"><strong>Scheme</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url_for('add_scheme')}}" class="nav-link"><strong>Add Schemes</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url_for('alerts')}}" class="nav-link"><strong>Alert</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#team" class="nav-link"><strong>Grievances</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url_for('log_out')}}" class="nav-link">Log Out</a>
+                        </li>
+                        {%else%}
+                        <li class="nav-item">
+                            <a href="{{url_for('home')}}" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url_for('log_in')}}" class="nav-link">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url_for('register')}}" class="nav-link">Register</a>
+                        </li>
+                        {%endif%}
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://image.shutterstock.com/image-vector/organic-farming-eco-tractor-creative-600w-258018374.jpg"
+                    style="width:100%;height: 670px;">
+                <div style="
+                    color: 'black';
+                    font-size: 15px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    bottom: 8px;
+                    width: 100%;
+                    text-align: center;
+                "></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://image.shutterstock.com/image-vector/support-local-farmers-creative-vector-260nw-301383641.jpg"
+                    style="width:100%;height: 670px;">
+                <div style="
+                    color: 'black';
+                    font-size: 15px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    bottom: 8px;
+                    width: 100%;
+                    text-align: center;
+                "></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://image.shutterstock.com/image-photo/agriculture-vertical-farming-technology-artificial-600w-734412136.jpg"
+                    style="width:100%;height: 670px;">https://image.shutterstock.com/image-photo/agriculture-vertical-farming-technology-artificial-600w-734412136.jpg
+                <div style="
+                    color: 'black';
+                    font-size: 15px;
+                    padding: 8px 12px;
+                    position: absolute;
+                    bottom: 8px;
+                    width: 100%;
+                    text-align: center;
+                "></div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+    <a href="{{url_for('register_buyer')}}">Register Buyer</a>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/Home.js')}}"></script>
+
+</body>
+
+</html>

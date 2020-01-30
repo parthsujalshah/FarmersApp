@@ -1,0 +1,52 @@
+#myNavbar {
+	height: 50px;
+	width: 100%;
+}
+/*change the link color on hover*/
+li a:hover {
+	background-color: #ffc733;
+	color: white;
+}
+.nav-link {
+	color: white;
+}
+#id1 {
+	background-color: #f2e6ff;
+}
+#id2 {
+	background-color: #ffddcc;
+}
+.bgd {
+	background-color: #e6fff2;
+}
+.container {
+	border-radius: 30px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	background-color: none;
+}
+.form_input {
+	margin-left: 10px;
+}
+#SchemeName {
+	width: 500px;
+	height: 50px;
+}
+#SchemeInfo {
+	height: 300px;
+	width: 900px;
+}
+.submit {
+	margin-top: 10px;
+	width: 100px;
+}
+#Info {
+	background-color:none;
+}
+#button {
+	display: none;
+}
+
+.container:hover #button {
+	display: inline-block;
+}

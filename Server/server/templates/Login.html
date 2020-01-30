@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--icon cdn-->
+    <script src="https://kit.fontawesome.com/e7e5439d34.js" crossorigin="anonymous"></script>
+    <!--meta required-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!--linking the CSS -->
+    <link rel="stylesheet" type="text/css" href="farmerfriendSignIn.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/Login.css')}}">
+    <title>Farmers Friend SignIn</title>
+</head>
+
+<body>
+    <div class="body">
+        <div class="navbar-container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="myNavbar">
+                <div class="d-flex flex-grow-1">
+                    <span class="w-100 d-lg-none d-block">
+                        <!-- hidden spacer to center brand on mobile --></span>
+                    <a class="navbar-brand" href="#">
+                        Navbar 7
+                    </a>
+                    <div class="w-100 text-right">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                    <ul class="navbar-nav ml-auto flex-nowrap">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#our projects" class="nav-link">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#events" class="nav-link">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#team" class="nav-link">Meet the Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">#</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-lg-6" id="id1">
+                <div class="container">
+                    <h1>Sign In</h1>
+                    <br>
+                    <button class="but1"><a href="www.facebook.com"><i class="fab fa-facebook"></i></a></button>
+                    <button class="but1"><a href="www.gmail.com"><i class="fab fa-google"></i></a></button>
+                    <button class="but1"><a href="www.linkedin"></a><i class="fab fa-linkedin"></i></button>
+                    <br>
+                    <br>
+                    <p>or use your registerd account:</p>
+                    <!--form>
+        	<div>
+        		<input class="textholder" type="text" name="Username" placeholder="Username">
+        	</div>
+        	<br>
+        	<div>
+        		<input class="textholder" type="text" name="Password" placeholder="Password">
+        	</div>
+        </form>
+        <br>
+        <div>
+        	<a href="">Forgot your Password?</a>
+        </div>
+        <hr>
+        <button class="but2">Sign In</button>
+	    </div>
+        </div-->
+                    <form method="POST" action="">
+                        {{ form.hidden_tag() }}
+                        <fieldset>
+                            <label for="username"><b>{{ form.name.label(class="username") }}</b></label>
+                            <div>
+                                {{ form.name }}
+                            </div>
+                            <label for="password"><b> {{ form.password.label( class="password")}}</b></label>
+                            <div>
+                                {{ form.password }}
+                            </div>
+                            <label for="password"><b> {{ form.remember.label( class="password")}}</b></label>
+                            <div>
+                                {{ form.remember }}
+                            </div>
+                        </fieldset>
+                        <div>
+                            {{ form.submit.label( class="but1")}}
+                            {{ form.submit() }}
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <img class="fit"
+                src="https://images.unsplash.com/photo-1547149600-a6cdf8fce60c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
+                alt="Register Now" style="width: 100%">
+            <h1 class="imagetext">Hello, Friend!</h1>
+            <br>
+            <p class="imagetext1">Enter your Personal details</p>
+            <p class="imagetext2">and Start the journey with us</p>
+            <button onclick="{() => {return url_for('register')}}" class="but3">Register Now</button>
+        </div>
+</body>
+
+</html>

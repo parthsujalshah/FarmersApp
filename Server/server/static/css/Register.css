@@ -1,0 +1,77 @@
+body, html {
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .bg-img {
+    /* The image used */
+    background-image: url("https://images.unsplash.com/photo-1572315831029-5d6f20e0035d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  
+    /* Control the height of the image */
+    min-height: 802px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Add styles to the form container */
+  .container {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 470px;
+    max-width: 450px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  /* Full-width input fields */
+    .name,.email,.designation,.password,.confirm_password{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  .name:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  .email:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  .designation:focus{
+    background-color: #ddd;
+    outline: none;
+  }
+  .password:focus{
+    background-color: #ddd;
+    outline: none;
+  }
+  .confirm_password:focus{
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit button */
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }

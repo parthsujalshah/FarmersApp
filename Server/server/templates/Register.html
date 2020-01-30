@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--meta required-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!--linking the CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Register.css') }}">
+	<title>Register Now</title>
+</head>
+<body>
+	<div class="bg-img">
+  <!--form action="upload.php" method="post" enctype="multipart/form-data" class="container">
+    <h1>Register Now!</h1>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+    <label for="designation"><b>Designation</b></label>
+    <input type="text" placeholder="Enter Designation" name="designation" required>
+    <label for="password"><b>Password</b></label>
+    <input type="text" placeholder="Enter Password" name="password" required>
+    <label for="submit"><b>Submit Image to Upload</b></label>
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="Upload Image" name="submit" required><br>
+    <input type="checkbox" name="terms" value="terms">"I agree to Terms & Conditions"<br>
+    <button type="submit" class="btn">Register</button>
+  </form-->
+  <form method="POST" action="" enctype="multipart/form-data" class="container" >
+  	        <h1>Register Now</h1>
+            {{ form.hidden_tag() }}
+            <fieldset>
+                <label for="name"><b>{{ form.name.label(class="name") }}</b></label>
+    <div>
+
+        {{ form.name }}
+    </div>
+    <label for="email"><b>{{ form.email.label( class="email")}}</b></label>
+    <div>
+
+        {{ form.email }}
+    </div>
+    <label for="designation"><b>{{ form.designation.label( class="designation")}}</b></label>
+    <div>
+
+        {{ form.designation }}
+    </div>
+    <label for="password"><b>{{ form.password.label( class="password")}}</b></label>
+    <div>
+
+        {{ form.password }}
+    </div>
+    <label for="confirm_password"><b>{{ form.confirm_password.label( class="confirm_password")}}</b></label>
+    <div>
+
+        {{ form.confirm_password }}
+    </div>
+    <label for="gov_id"><b>{{ form.gov_id.label( class="gov_id")}}</b></label>
+    <div>
+        {{ form.gov_id }}
+    </div>
+    </fieldset>
+    <div>
+        {{ form.submit.label( class="button")}}
+        {{ form.submit() }}
+    </div>
+
+    </form>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,2 @@
+def cost_estimation(machinery_cost,seed_cost,fertilizer_cost):
+	return machinery_cost+seed_cost+fertilizer_cost

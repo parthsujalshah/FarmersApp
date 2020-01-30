@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--icon cdn-->
+    <script src="https://kit.fontawesome.com/e7e5439d34.js" crossorigin="anonymous"></script>
+    <!--meta required-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!--linking the CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="FarmersFriendSchemes.css"> -->
+    <title>Register</title>
+</head>
+
+<body style="
+    background-image: url('https://images.unsplash.com/photo-1572315831029-5d6f20e0035d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+">
+    <div>
+        <form method="POST" action="" enctype="multipart/form-data" style="
+            position: absolute;
+            margin-top: 50px;
+            margin-left: 580px;
+            margin-bottom: 50px;
+            max-width: 550px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        ">
+        <h1>Register Now!</h1>
+        {{ form.hidden_tag() }}
+            <fieldset>
+                <div>
+                    <div style="
+                        margin: 20px;
+                    ">
+                        <label for="name"><b>{{form.name.label}}</b></label>
+                        {{form.name(style="
+                            width: 100%;
+                            padding: 15px;
+                            align-items: center;
+                            justify-content: center;
+                            border: none;
+                            background: #f1f1f1;
+                        ")}}
+                    </div>
+                    <div style="
+                        margin: 20px;
+                    ">
+                        <label for="email"><b>{{form.email.label}}</b></label>
+                        {{form.email(style="
+                            width: 100%;
+                            padding: 15px;
+                            align-items: center;
+                            justify-content: center;
+                            border: none;
+                            background: #f1f1f1;
+                        ")}}
+                    </div>
+                    <div style="
+                        margin: 20px;
+                    ">
+                        <label for="designation"><b>{{form.designation.label}}</b></label>
+                        {{form.designation(style="
+                            width: 100%;
+                            padding: 15px;
+                            align-items: center;
+                            justify-content: center;
+                            border: none;
+                            background: #f1f1f1;
+                        ")}}
+                    </div>
+                    <div style="
+                        margin: 20px;
+                    ">
+                        <label for="password"><b>{{form.password.label}}</b></label>
+                        {{form.password(style="
+                            width: 100%;
+                            padding: 15px;
+                            align-items: center;
+                            justify-content: center;
+                            border: none;
+                            background: #f1f1f1;
+                        ")}}
+                    </div>
+                    <div style="
+                        margin: 20px;
+                    ">
+                        <label for="confirm_password"><b>{{form.confirm_password.label}}</b></label>
+                        {{form.confirm_password(style="
+                            width: 100%;
+                            padding: 15px;
+                            align-items: center;
+                            justify-content: center;
+                            border: none;
+                            background: #f1f1f1;
+                        ")}}
+                    </div>
+                    <div style="
+                        margin: 20px;
+                    ">
+                        <label for="gov_id"><b>{{form.gov_id.label}}</b></label>
+                        {{form.gov_id(style="
+                            width: 100%;
+                            padding: 15px;
+                            align-items: center;
+                            justify-content: center;
+                            border: none;
+                            background: #f1f1f1;
+                        ")}}
+                    </div>
+                </div>
+            </fieldset>
+            <div>
+                {{ form.submit.label()}}
+                {{ form.submit() }}
+                <br>
+                <a href="{{url_for('log_in')}}">Already have an account? SignIn Here</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

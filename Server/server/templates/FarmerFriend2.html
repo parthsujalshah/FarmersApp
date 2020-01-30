@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--icon cdn-->
+    <script src="https://kit.fontawesome.com/e7e5439d34.js" crossorigin="anonymous"></script>
+    <!--meta required-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-->
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!--linking the CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="FarmersFriendSchemes.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/FarmersFriendSchemes.css') }}">
+    <title>farmers friend schemes</title>
+</head>
+
+<body>
+    <div class="bgd">
+        <div class="navbar-container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="myNavbar">
+                <div class="d-flex flex-grow-1">
+                    <span class="w-100 d-lg-none d-block">
+                        <!-- hidden spacer to center brand on mobile --></span>
+                    <a class="navbar-brand" href="#">
+                        Navbar 7
+                    </a>
+                    <div class="w-100 text-right">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+                    <ul class="navbar-nav ml-auto flex-nowrap">
+                        <li class="nav-item">
+                            <a href="{{url_for('home')}}" class="nav-link "><strong>Home</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url_for('schemes_test')}}" class="nav-link"><strong>Scheme</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url_for('add_scheme')}}" class="nav-link active"><strong>Add Schemes</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url_for('alerts')}}" class="nav-link"><strong>Alert</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#team" class="nav-link"><strong>Grievances</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url_for('log_out')}}" class="nav-link">Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <h1>Government Schemes</h1>
+        {% for scheme in schemes %}
+            <div class="container" id="id{{scheme.id%2+1}}">
+                <h3>{{scheme.name}}</h3>
+                <p>{{scheme.details}}</p>
+                <form action="{{url_for('delete_scheme', scheme_id=scheme.id)}}" method="POST">
+					<input type="submit" value="Delete">
+				</form>
+                <!-- <div class="but14" id="button">
+                    <button onclick="cont_delete"><i class="far fa-window-close"></i></button>
+                </div> -->
+            </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
