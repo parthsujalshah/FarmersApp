@@ -1,0 +1,127 @@
+{
+    "ApparentTemperature": {
+        "Imperial": [Object
+        ],
+        "Metric": [Object
+        ]
+    },
+    "Ceiling": {
+        "Imperial": [Object
+        ],
+        "Metric": [Object
+        ]
+    },
+    "CloudCover": 77,
+    "DewPoint": {
+        "Imperial": [Object
+        ],
+        "Metric": [Object
+        ]
+    },
+    "EpochTime": 1579875300,
+    "HasPrecipitation": false,
+    "IsDayTime": false,
+    "Link": "http://www.accuweather.com/en/in/sidhuwal/2960050/current-weather/2960050?lang=en-us",
+    "LocalObservationDateTime": "2020-01-24T19:45:00+05:30",
+    "MobileLink": "http://m.accuweather.com/en/in/sidhuwal/2960050/current-weather/2960050?lang=en-us",
+    "ObstructionsToVisibility": "",
+    "Past24HourTemperatureDeparture": {
+        "Imperial": [Object
+        ],
+        "Metric": [Object
+        ]
+    },
+    "Precip1hr": {
+        "Imperial": [Object
+        ],
+        "Metric": [Object
+        ]
+    },
+    "PrecipitationSummary": {
+        "Past12Hours": [Object
+        ],
+        "Past18Hours": [Object
+        ],
+        "Past24Hours": [Object
+        ],
+        "Past3Hours": [Object
+        ],
+        "Past6Hours": [Object
+        ],
+        "Past9Hours": [Object
+        ],
+        "PastHour": [Object
+        ],
+        "Precipitation": [Object
+        ]
+    },
+    "PrecipitationType": null,
+    "Pressure": {
+        "Imperial": [Object
+        ],
+        "Metric": [Object
+        ]
+    },
+    "PressureTendency": {
+        "Code": "F",
+        "LocalizedText": "Falling"
+    },
+    "RealFeelTemperature": {
+        "Imperial": [Object
+        ],
+        "Metric": [Object
+        ]
+    },
+    "RealFeelTemperatureShade": {
+        "Imperial": [Object
+        ],
+        "Metric": [Object
+        ]
+    },
+    "RelativeHumidity": 69,
+    "Temperature": {
+        "Imperial": [Object
+        ],
+        "Metric": [Object
+        ]
+    },
+    "TemperatureSummary": {
+        "Past12HourRange": [Object
+        ],
+        "Past24HourRange": [Object
+        ],
+        "Past6HourRange": [Object
+        ]
+    },
+    "UVIndex": 0,
+    "UVIndexText": "Low",
+    "Visibility": {
+        "Imperial": [Object
+        ],
+        "Metric": [Object
+        ]
+    },
+    "WeatherIcon": 38,
+    "WeatherText": "Mostly cloudy",
+    "WetBulbTemperature": {
+        "Imperial": [Object
+        ],
+        "Metric": [Object
+        ]
+    },
+    "Wind": {
+        "Direction": [Object
+        ],
+        "Speed": [Object
+        ]
+    },
+    "WindChillTemperature": {
+        "Imperial": [Object
+        ],
+        "Metric": [Object
+        ]
+    },
+    "WindGust": {
+        "Speed": [Object
+        ]
+    }
